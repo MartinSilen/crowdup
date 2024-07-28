@@ -15,6 +15,9 @@ import {
 } from "@mantine/core";
 import {TitleBadge} from "../../components";
 import {Link} from "react-router-dom";
+import smilingWoman from "../../assets/img/smiling-woman.png";
+import friends from "../../assets/img/friends.png";
+import charity from "../../assets/img/charity.png";
 
 const useStyles = createStyles((theme) => ({
     feature: {
@@ -24,7 +27,7 @@ const useStyles = createStyles((theme) => ({
         border: `none`,
 
         '&:hover': {
-            backgroundColor: theme.colors.secondary[2]
+            backgroundColor: theme.colors.primary[2]
         }
     },
 }));
@@ -39,7 +42,7 @@ const WaysToFundSection = ({boxProps, subtitleProps}: IProps) => {
     const {classes, cx, theme} = useStyles();
 
     return (
-        <Box sx={{background: theme.colors.secondary[8], color: theme.white}} {...boxProps}>
+        <Box sx={{background: 'linear-gradient(170deg,  rgba(81, 237, 82, 0.3), 10%, #2C2C2C, 90%, rgba(81, 237, 82, 0.3))', color: theme.white}} {...boxProps}>
             <Container fluid p={36}>
                 <Grid>
                     <Grid.Col lg={4}>
@@ -62,7 +65,7 @@ const WaysToFundSection = ({boxProps, subtitleProps}: IProps) => {
                             >
                                 <Card.Section>
                                     <Image
-                                        src="https://images.unsplash.com/photo-1518101645466-7795885ff8f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
+                                        src={smilingWoman}/>
                                 </Card.Section>
                                 <Text mt="md" align="center" {...subtitleProps}>Yourself</Text>
                             </Card>
@@ -75,7 +78,7 @@ const WaysToFundSection = ({boxProps, subtitleProps}: IProps) => {
                             >
                                 <Card.Section>
                                     <Image
-                                        src="https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
+                                    src={friends}/>
                                 </Card.Section>
                                 <Text mt="md" align="center" {...subtitleProps}>Friends & Family</Text>
                             </Card>
@@ -88,7 +91,7 @@ const WaysToFundSection = ({boxProps, subtitleProps}: IProps) => {
                             >
                                 <Card.Section>
                                     <Image
-                                        src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
+                                    src={charity}/>
                                 </Card.Section>
                                 <Text mt="md" align="center" {...subtitleProps}>Charity</Text>
                             </Card>

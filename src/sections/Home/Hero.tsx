@@ -1,5 +1,5 @@
 import {Button, Center, Container, createStyles, Group, Overlay, rem, Stack, Text, Title} from '@mantine/core';
-import {IconRocket} from "@tabler/icons-react";
+import {IconRocket, IconSparkles, IconStar, IconWorldStar} from "@tabler/icons-react";
 import {Link} from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
         paddingTop: rem(180),
         paddingBottom: rem(130),
         backgroundImage:
-            'url(https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80)',
+            'url(src/assets/img/kids.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: rem(640),
@@ -38,7 +38,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     title: {
-        fontWeight: 900,
+        fontWeight: 400,
         fontSize: rem(64),
         letterSpacing: rem(-1),
         paddingLeft: theme.spacing.md,
@@ -87,6 +87,9 @@ const useStyles = createStyles((theme) => ({
 
     control: {
         fontSize: theme.fontSizes.md,
+        color: theme.colors.green[4],
+        borderWidth: '2px',
+        borderRadius: theme.radius.lg,
 
         '&:not(:first-of-type)': {
             marginLeft: theme.spacing.md,
@@ -110,11 +113,13 @@ const useStyles = createStyles((theme) => ({
     },
 
     badge: {
-        width: "fit-content",
+        justifyContent: 'center',
+        width: "200px",
         padding: theme.spacing.sm,
-        borderRadius: theme.radius.sm,
-        backgroundImage: theme.fn.gradient({from: theme.colors.green[2], to: theme.colors.lime[6], deg: 20}),
-        fontWeight: 500
+        borderRadius: theme.radius.lg,
+        backgroundColor: '#7AE574',
+        fontWeight: 700,
+        fontSize: "16px"
     }
 }));
 
@@ -130,8 +135,8 @@ const HeroSection = () => {
                     <Stack spacing="xl">
                         <Center>
                             <Group spacing={4} className={classes.badge}>
-                                <IconRocket stroke={1.5}/>
-                                <Text transform="uppercase">Make it Happen</Text>
+                                <IconSparkles size={24} rotate={180} stroke={1.5} color={'white'}/>
+                                <Text color={'white'}>Make It Happen</Text>
                             </Group>
                         </Center>
                         <Title className={classes.title}>
@@ -156,10 +161,10 @@ const HeroSection = () => {
                 </Container>
 
                 <div className={classes.controls}>
-                    <Button className={classes.control} variant="white" size="lg" component={Link} to="/create-campaign">
+                    <Button className={classes.control} variant="outline" size="lg" component={Link} to="/create-campaign">
                         Start a campaign
                     </Button>
-                    <Button className={classes.control} variant="white" size="lg" component={Link} to="/campaigns">
+                    <Button className={classes.control} variant="outline" size="lg" component={Link} to="/campaigns">
                         Explore now
                     </Button>
                 </div>

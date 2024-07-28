@@ -32,7 +32,7 @@ const HowItWorksPage = (): JSX.Element => {
 
     const titleProps: TitleProps = {
         size: 32,
-        weight: 800,
+        weight: 500,
         mb: "xl",
         transform: 'capitalize',
         sx: {lineHeight: '40px'}
@@ -68,7 +68,7 @@ const HowItWorksPage = (): JSX.Element => {
             <Box>
                 <Container>
                     <Box {...boxProps} sx={{textAlign: 'center'}}>
-                        <Title mb={48} fw={800}>How to Fundraise Online</Title>
+                        <Title mb={48} fw={600}>How to Fundraise Online</Title>
                         <Text>GoGetFunding is the best place to fundraise, whether you are an individual, group,
                             or organization.</Text>
                         <Text fw={600} mb={36}>Watch our explainer video.</Text>

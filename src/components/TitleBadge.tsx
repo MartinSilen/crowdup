@@ -5,10 +5,9 @@ const useStyles = createStyles((theme) => ({
         width: "fit-content",
         padding: `${theme.spacing.xs} ${theme.spacing.sm}`,
         borderRadius: theme.radius.xl,
-        backgroundColor: theme.colors.secondary[1],
-        color: theme.black,
-        fontWeight: 400,
-        textTransform: 'uppercase',
+        backgroundColor: theme.colors.primary[4],
+        color: theme.white,
+        fontWeight: 600,
         fontSize: theme.fontSizes.sm,
         lineHeight: '14px'
     }

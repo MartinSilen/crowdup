@@ -48,7 +48,7 @@ const useStyles = createStyles((theme) => ({
         paddingRight: theme.spacing.md,
         textDecoration: 'none',
         color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-        fontWeight: 500,
+        fontWeight: 600,
         fontSize: theme.fontSizes.sm,
 
         [theme.fn.smallerThan('md')]: {
@@ -112,7 +112,7 @@ const useStyles = createStyles((theme) => ({
 
     linkIcon: {
         ref: getStylesRef('icon'),
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.secondary[6],
+        color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.primary[6],
     },
 
     hiddenMobile: {

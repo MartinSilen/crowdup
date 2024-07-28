@@ -28,8 +28,7 @@ const useStyles = createStyles((theme) => ({
 
         '&:hover': {
             boxShadow: theme.shadows.xl,
-            border: `2px solid ${theme.colors.primary[7]}`,
-            backgroundColor: theme.colors.primary[0],
+            backgroundColor: 'rgba(209, 213, 219, 0.3)',
             transition: 'all 150ms ease',
         }
     },
@@ -78,7 +77,7 @@ const CampaignCard = ({data, showActions}: IProps) => {
 
                     <Group position="apart">
                         <Text size="xs" transform="uppercase" color="dimmed" fw={700}>{country}</Text>
-                        <Badge variant="dot" color="secondary">{category}</Badge>
+                        <Badge variant="dot" color="primary">{category}</Badge>
                     </Group>
 
                     {showActions && <Text lineClamp={3} size="sm">{description}</Text>}

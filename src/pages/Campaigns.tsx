@@ -15,7 +15,7 @@ const CampaignsPage = (): JSX.Element => {
 
     const titleProps: TitleProps = {
         size: 32,
-        weight: 700,
+        weight: 500,
         mb: "lg",
         transform: 'capitalize',
         sx: {lineHeight: '40px'}
@@ -35,34 +35,39 @@ const CampaignsPage = (): JSX.Element => {
                             <Title {...titleProps} align="center">Discover campaigns to fund</Title>
                         </Box>
                         <Flex
-                            justify="space-between"
-                            gap={{base: 'sm', sm: 'lg'}}
+                            gap='sm'
                             direction={{base: 'column-reverse', sm: 'row'}}
                         >
-                            <TextInput placeholder="search campaigns..." sx={{width: 500}}/>
-                            <Flex align="center" gap="sm" justify={{base: 'space-between', sm: 'flex-start'}}>
-                                <Select
-                                    label=""
-                                    placeholder="campaigns in"
-                                    defaultValue=""
-                                    data={[
-                                        {value: '10', label: 'show: 10'},
-                                        {value: '25', label: 'show: 25'},
-                                        {value: '50', label: 'show: 50'},
-                                        {value: '100', label: 'show: 100'},
-                                    ]}
-                                />
-                                <Select
-                                    label=""
-                                    placeholder="Explore"
-                                    defaultValue="featured"
-                                    data={[
-                                        {value: 'featured', label: 'sort by: featured'},
-                                        {value: 'popular', label: 'sort by: popular'},
-                                        {value: 'latest', label: 'sorty by: latest'},
-                                    ]}
-                                />
-                            </Flex>
+                            <TextInput variant='filled'
+                                       style={{flex:2}}
+                                       radius='md' placeholder="search campaigns..."/>
+                            <Select
+                                variant='filled'
+                                radius='md'
+                                style={{flex:1}}
+                                label=""
+                                placeholder="campaigns in"
+                                defaultValue=""
+                                data={[
+                                    {value: '10', label: 'show: 10'},
+                                    {value: '25', label: 'show: 25'},
+                                    {value: '50', label: 'show: 50'},
+                                    {value: '100', label: 'show: 100'},
+                                ]}
+                            />
+                            <Select
+                                variant='filled'
+                                radius='md'
+                                style={{flex:1}}
+                                label=""
+                                placeholder="Explore"
+                                defaultValue="featured"
+                                data={[
+                                    {value: 'featured', label: 'featured'},
+                                    {value: 'popular', label: 'popular'},
+                                    {value: 'latest', label: 'latest'},
+                                ]}
+                            />
                         </Flex>
                         <SimpleGrid
                             cols={3}

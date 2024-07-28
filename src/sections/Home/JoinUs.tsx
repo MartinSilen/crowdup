@@ -14,6 +14,7 @@ import {
 } from "@mantine/core";
 import {IconUsers, IconWorld} from "@tabler/icons-react"
 import {TitleBadge} from "../../components";
+import childrenSitting from "../../assets/img/children-sitting.png";
 import {useMediaQuery} from "@mantine/hooks";
 
 interface IProps {
@@ -32,7 +33,7 @@ const JoinUsSection = ({boxProps, subtitleProps}: IProps) => {
                     <TitleBadge title='Open partnership - Start your journey'/>
                     <Text {...subtitleProps}>Almost is never enough</Text>
                     <Flex gap="xs">
-                        <ThemeIcon size="xl" color="secondary" variant="filled">
+                        <ThemeIcon size="xl" color="primary" variant="filled">
                             <IconWorld/>
                         </ThemeIcon>
                         <Stack spacing={2}>
@@ -41,7 +42,7 @@ const JoinUsSection = ({boxProps, subtitleProps}: IProps) => {
                         </Stack>
                     </Flex>
                     <Flex gap="xs">
-                        <ThemeIcon size="xl" color="secondary" variant="filled">
+                        <ThemeIcon size="xl" color="primary" variant="filled">
                             <IconUsers/>
                         </ThemeIcon>
                         <Stack spacing={2}>
@@ -69,7 +70,7 @@ const JoinUsSection = ({boxProps, subtitleProps}: IProps) => {
                 </Stack>
                 <Box mx={matchesMobile ? 0 : 'auto'}>
                     <Image
-                        src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        src={childrenSitting}
                         width={matchesMobile ? '100%' : 500}
                         height={400}
                         radius="sm"

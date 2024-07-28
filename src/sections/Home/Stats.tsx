@@ -50,7 +50,7 @@ const StatsSection = ({boxProps, subtitleProps, titleProps}: IProps) => {
     return (
         <Box {...boxProps}>
             <Box mb="lg">
-                <TitleBadge title="make a difference"/>
+                <TitleBadge title="Make a difference"/>
                 <Title {...titleProps}>large pool potential investor</Title>
                 <Text {...subtitleProps}>With our crowdfunding platform, you can support the projects and causes you
                     care about most</Text>
